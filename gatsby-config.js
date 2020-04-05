@@ -11,23 +11,19 @@ module.exports = {
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/galaria_sadik`,
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/Sadique523`,
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
+        url: `https://instagram.com/sadik007`,
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://www.linkedin.com/in/sadique-galaria-7a5b19163/`,
       },
     ],
   },

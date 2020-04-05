@@ -64,10 +64,10 @@ index c713aa8..943a3bf 100644
  
  const GridControlsContainer = styled.div`
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
-index d833006..208a74e 100644
+index d833006..891bc8e 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
-@@ -92,36 +92,69 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
+@@ -92,36 +92,62 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
  
    const { gridLayout } = useContext(GridLayoutContext);
    const hasOverflow = narrow && article.title.length > 35;
@@ -84,7 +84,7 @@ index d833006..208a74e 100644
 +          <ImageContainer narrow={narrow} gridLayout={gridLayout}>
 +            {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
 +          </ImageContainer>
-+          <div>
++          <div style={{paddingBottom: '10px'}}>
 +            <Title dark hasOverflow={hasOverflow} gridLayout={gridLayout}>
 +              {article.title}
 +            </Title>
@@ -95,11 +95,6 @@ index d833006..208a74e 100644
 +            >
 +              {article.excerpt}
 +            </Excerpt>
-+            {!article.isProject ?  
-+              <MetaData>
-+              {article.date} · {article.timeToRead} min read
-+            </MetaData> : null
-+            }
 +          </div>
 +        </Item>
 +    </a>
@@ -124,11 +119,9 @@ index d833006..208a74e 100644
 +            >
 +              {article.excerpt}
 +            </Excerpt>
-+            {!article.isProject ?  
-+              <MetaData>
++            <MetaData>
 +              {article.date} · {article.timeToRead} min read
-+            </MetaData> : null
-+            }
++            </MetaData> 
 +          </div>
 +        </Item>
 +      </ArticleLink>
