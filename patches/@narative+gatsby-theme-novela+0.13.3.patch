@@ -48,6 +48,21 @@ diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/.D
 new file mode 100644
 index 0000000..5008ddf
 Binary files /dev/null and b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/.DS_Store differ
+diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx
+index c713aa8..943a3bf 100644
+--- a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx
++++ b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx
+@@ -91,10 +91,6 @@ const SubheadingContainer = styled.div`
+   ${mediaqueries.tablet`
+     margin-bottom: 60px;
+   `};
+-
+-  ${mediaqueries.phablet`
+-    display: none;
+-  `};
+ `;
+ 
+ const GridControlsContainer = styled.div`
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
 index d833006..208a74e 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
