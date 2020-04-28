@@ -1,8 +1,76 @@
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx b/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
-index d5b8d29..570efeb 100644
+index d5b8d29..4347341 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
-@@ -50,7 +50,7 @@ const BioAvatar = styled.div`
+@@ -1,6 +1,7 @@
+ import React from 'react';
+ import { Link } from 'gatsby';
+ import styled from '@emotion/styled';
++import { keyframes } from "@emotion/core";
+ 
+ import Image from '@components/Image';
+ import { IAuthor } from '@types';
+@@ -8,16 +9,17 @@ import { IAuthor } from '@types';
+ const Bio: React.FC<IAuthor> = ({ author }) => {
+   return (
+     <BioContainer>
+-      <BioAvatar
++      <BioAvatarContainer
+         as={author.authorsPage ? Link : 'div'} 
+         to={author.slug}
+         data-a11y="false"
+         aria-label="Author's bio"
+       >
++        <BioAvatar/> 
+         <BioAvatarInner>
+           <RoundedImage src={author.avatar.medium} />
+         </BioAvatarInner>
+-      </BioAvatar>
++      </BioAvatarContainer>
+       <BioText dangerouslySetInnerHTML={{ __html: author.bio }} />
+     </BioContainer>
+   );
+@@ -28,19 +30,33 @@ export default Bio;
+ const BioContainer = styled.div`
+   display: flex;
+   align-items: center;
+-  position: relative;
+   left: -10px;
+ `;
+ 
+-const BioAvatar = styled.div`
+-  display: block;
++const BioAvatarContainer = styled.div`
+   position: relative;
++`;
++
++
++const ripple = keyframes`
++  from {
++    transform: scale(1);
++    opacity: 1;
++  }
++
++  to {
++    transform: scale(1.5);
++    opacity: 0;
++  }
++`;
++
++const BioAvatar = styled.a`
++  display: block;
++  position: absolute;
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+-  background: rgba(0, 0, 0, 0.25);
+-  margin-right: 16px;
+-  margin: 10px 26px 10px 10px;
++  animation: 2s ${ripple} infinite;
+ 
+   &::after {
+     content: '';
+@@ -50,7 +66,7 @@ const BioAvatar = styled.div`
      width: 50px;
      height: 50px;
      border-radius: 50%;
