@@ -156,10 +156,10 @@ index d833006..891bc8e 100644
  
  const wide = '1fr';
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
-index e982823..661e745 100644
+index e982823..a629f33 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
-@@ -10,7 +10,67 @@ interface AuthorArticlesProps {
+@@ -10,9 +10,70 @@ interface AuthorArticlesProps {
    articles: IArticle[];
  }
  
@@ -167,18 +167,18 @@ index e982823..661e745 100644
 +const articles = [
 +  {
 +    id: "1",
-+    slug: "https://sadiquegalaria.netlify.com",
++    slug: "https://what2binge.netlify.app/",
 +    secret: false,
-+    title: "My Portfolio",
++    title: "What2Binge App",
 +    author: "Sadique Galaria",
 +    date: "April 30th, 2019",
 +    dateForSEO: "2019-04-30T00:00:00.000Z",
 +    timeToRead: null,
-+    excerpt: "My Old Portfolio Website",
++    excerpt: "Create a bucket list of all the tv shows and movies you watch and share with your friends!",
 +    subscription: true,
 +    hero: {
 +        regular: {
-+          src: 'https://i.ytimg.com/vi/gtJ5i6DhbaM/maxresdefault.jpg'
++          src: 'https://firebasestorage.googleapis.com/v0/b/auth-39cb9.appspot.com/o/what2binge.png?alt=media&token=bc8a1e16-43da-4380-a463-0f7790c0c183'
 +        }
 +    },
 +    isProject: true,
@@ -186,40 +186,40 @@ index e982823..661e745 100644
 +  },
 +  {
 +    id: "2",
-+    slug: "https://sadique523.github.io/weather/",
++    slug: "https://expotodo.netlify.app/",
 +    secret: false,
-+    title: "Weather App",
++    title: "To-Do App",
 +    author: "Sadique Galaria",
 +    date: "",
 +    dateForSEO: "",
 +    timeToRead: null,
-+    excerpt: "Weather App built with weater.api",
++    excerpt: "Personal Todo App made with expo-web",
 +    subscription: true,
 +    hero: {
 +        regular: {
-+          src: 'https://wallpaperstock.net/wallpapers/thumbs1/40194wide.jpg'
++          src: 'https://firebasestorage.googleapis.com/v0/b/auth-39cb9.appspot.com/o/Screenshot%202020-04-28%20at%208.42.49%20PM.png?alt=media&token=ca0db45b-2eb0-4b65-a0ea-f29307c3093a'
 +        }
 +    },
 +    isProject: true,
 +  },
-+  {
-+    id: "3",
-+    slug: "https://sadique523.github.io/news/",
-+    secret: false,
-+    title: "News App",
-+    author: "Sadique Galaria",
-+    date: "",
-+    dateForSEO: "",
-+    timeToRead: null,
-+    excerpt: "News App buit with some api",
-+    subscription: true,
-+    hero: {
-+        regular: {
-+          src: 'https://kingfisher.scene7.com/is/image/Kingfisher/4000776856012_01c'
-+        }
-+    },
-+    isProject: true,
-+  },
++  // {
++  //   id: "3",
++  //   slug: "https://3ct1j.csb.app/",
++  //   secret: false,
++  //   title: "Reddit App Clone",
++  //   author: "Sadique Galaria",
++  //   date: "",
++  //   dateForSEO: "",
++  //   timeToRead: null,
++  //   excerpt: "A Clone of Reddit app with new design",
++  //   subscription: true,
++  //   hero: {
++  //       regular: {
++  //         src: 'https://firebasestorage.googleapis.com/v0/b/auth-39cb9.appspot.com/o/reddit.png?alt=media&token=35cbb044-fcc6-48cc-82cc-9d5ca1613f74'
++  //       }
++  //   },
++  //   isProject: true,
++  // },
 + 
 +]
 +
@@ -227,4 +227,17 @@ index e982823..661e745 100644
 +  console.log(articles);
    return (
      <AuthorArticlesContainer>
++      <Heading>My Projects</Heading>
        <ArticlesList articles={articles} alwaysShowAllDetails />
+     </AuthorArticlesContainer>
+   );
+@@ -40,3 +101,9 @@ const AuthorArticlesContainer = styled.div`
+     background: transparent;
+   `}
+ `;
++
++const Heading = styled.h1`
++    font-size: 40px;
++    margin-bottom: 40px;
++    color: ${p => p.theme.colors.primary};
++`
