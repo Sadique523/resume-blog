@@ -42,12 +42,10 @@ index 1df6e45..37f5cb7 100644
    z-index: 100;
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/.DS_Store b/node_modules/@narative/gatsby-theme-novela/src/sections/.DS_Store
 new file mode 100644
-index 0000000..4765b3c
-Binary files /dev/null and b/node_modules/@narative/gatsby-theme-novela/src/sections/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/.DS_Store b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/.DS_Store
 new file mode 100644
-index 0000000..5008ddf
-Binary files /dev/null and b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx
 index c713aa8..943a3bf 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero.tsx
@@ -64,7 +62,7 @@ index c713aa8..943a3bf 100644
  
  const GridControlsContainer = styled.div`
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
-index d833006..891bc8e 100644
+index d833006..7260af9 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/sections/articles/Articles.List.tsx
 @@ -92,36 +92,62 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
@@ -127,7 +125,7 @@ index d833006..891bc8e 100644
 +      </ArticleLink>
 +    );
 +  }
-   
+ 
 -  return (
 -    <ArticleLink to={article.slug} data-a11y="false">
 -      <Item gridLayout={gridLayout}>
@@ -156,10 +154,10 @@ index d833006..891bc8e 100644
  
  const wide = '1fr';
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
-index e982823..a629f33 100644
+index e982823..9640211 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
-@@ -10,9 +10,70 @@ interface AuthorArticlesProps {
+@@ -10,9 +10,51 @@ interface AuthorArticlesProps {
    articles: IArticle[];
  }
  
@@ -202,7 +200,6 @@ index e982823..a629f33 100644
 +    },
 +    isProject: true,
 +  },
-+ 
 +]
 +
 +const AuthorArticles: React.FC<AuthorArticlesProps> = () => {
@@ -213,7 +210,7 @@ index e982823..a629f33 100644
        <ArticlesList articles={articles} alwaysShowAllDetails />
      </AuthorArticlesContainer>
    );
-@@ -40,3 +101,9 @@ const AuthorArticlesContainer = styled.div`
+@@ -40,3 +82,9 @@ const AuthorArticlesContainer = styled.div`
      background: transparent;
    `}
  `;
