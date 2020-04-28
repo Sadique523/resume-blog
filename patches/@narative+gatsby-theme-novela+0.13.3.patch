@@ -202,24 +202,6 @@ index e982823..a629f33 100644
 +    },
 +    isProject: true,
 +  },
-+  // {
-+  //   id: "3",
-+  //   slug: "https://3ct1j.csb.app/",
-+  //   secret: false,
-+  //   title: "Reddit App Clone",
-+  //   author: "Sadique Galaria",
-+  //   date: "",
-+  //   dateForSEO: "",
-+  //   timeToRead: null,
-+  //   excerpt: "A Clone of Reddit app with new design",
-+  //   subscription: true,
-+  //   hero: {
-+  //       regular: {
-+  //         src: 'https://firebasestorage.googleapis.com/v0/b/auth-39cb9.appspot.com/o/reddit.png?alt=media&token=35cbb044-fcc6-48cc-82cc-9d5ca1613f74'
-+  //       }
-+  //   },
-+  //   isProject: true,
-+  // },
 + 
 +]
 +
