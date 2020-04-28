@@ -1,5 +1,5 @@
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx b/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
-index d5b8d29..4347341 100644
+index d5b8d29..be608d1 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
 @@ -1,6 +1,7 @@
@@ -38,10 +38,8 @@ index d5b8d29..4347341 100644
    left: -10px;
  `;
  
--const BioAvatar = styled.div`
--  display: block;
 +const BioAvatarContainer = styled.div`
-   position: relative;
++  position: relative;
 +`;
 +
 +
@@ -57,8 +55,9 @@ index d5b8d29..4347341 100644
 +  }
 +`;
 +
-+const BioAvatar = styled.a`
-+  display: block;
+ const BioAvatar = styled.div`
+   display: block;
+-  position: relative;
 +  position: absolute;
    height: 40px;
    width: 40px;
@@ -108,6 +107,38 @@ index 1df6e45..37f5cb7 100644
  const NavContainer = styled.div`
    position: relative;
    z-index: 100;
+diff --git a/node_modules/@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui/prism.ts b/node_modules/@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui/prism.ts
+index 4fb900b..5067ca9 100644
+--- a/node_modules/@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui/prism.ts
++++ b/node_modules/@narative/gatsby-theme-novela/src/gatsby-plugin-theme-ui/prism.ts
+@@ -1,8 +1,8 @@
+ export default {
+   token: `#fff`,
+   languageJavascript: `#e8696b`,
+-  javascript: `#e8696b`,
+-  background: `#292c34`,
++  javascript: `#e6cd69`,
++  background: `#151718`,
+   comment: `#5e6a76`,
+   string: `#a8e2a8`,
+   var: `#b3bac5`,
+@@ -10,12 +10,12 @@ export default {
+   constant: `#b3bac5`,
+   plain: `#fff`,
+   doctype: `#e8696b`,
+-  tag: `#e8696b`,
+-  keyword: `#d49fd4`,
++  tag: `#fd797e`,
++  keyword: `#ffa500`,
+   boolean: `#ff5874`,
+-  function: `#5F8DC3`,
++  function: `#2fd2f9`,
+   parameter: `#F9965D`,
+-  className: `#ffcf74`,
++  className: `#ff6347`,
+   attrName: `#bf87ba`,
+   attrValue: `#a8e2a8`,
+   interpolation: `#fff`,
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/.DS_Store b/node_modules/@narative/gatsby-theme-novela/src/sections/.DS_Store
 new file mode 100644
 index 0000000..e69de29
