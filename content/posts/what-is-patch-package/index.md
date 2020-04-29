@@ -11,7 +11,7 @@ As I was scrolling through my youtube feed I came across a video by [Ben Awad](h
 
 Patch-package is a utility package that `lets app authors instantly make and keep fixes to npm dependencies`.
 
-Using patch-package is very simple. All you need to do is (after you are done making changes to the package you intended to fix) run the patch-package cli with `npm ` or `yarn` followed by the dependency/package name.
+Using patch-package is very simple. All you need to do is (after you are done making changes to the package you intended to fix) run the patch-package cli with `npx ` or `yarn` followed by the dependency/package name.
 
 ```json
 npx patch-package packagename // Using patch-package with npx
