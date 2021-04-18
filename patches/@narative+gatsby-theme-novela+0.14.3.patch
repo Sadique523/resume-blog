@@ -1,5 +1,5 @@
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx b/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
-index d5b8d29..be608d1 100644
+index d5b8d29..42537a3 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/components/Bio/Bio.tsx
 @@ -1,6 +1,7 @@
@@ -16,7 +16,7 @@ index d5b8d29..be608d1 100644
      <BioContainer>
 -      <BioAvatar
 +      <BioAvatarContainer
-         as={author.authorsPage ? Link : 'div'} 
+         as={author.authorsPage ? Link : 'div'}
          to={author.slug}
          data-a11y="false"
          aria-label="Author's bio"
@@ -253,7 +253,7 @@ index d833006..7260af9 100644
  
  const wide = '1fr';
 diff --git a/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx b/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
-index e982823..9640211 100644
+index e982823..11a75a5 100644
 --- a/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
 +++ b/node_modules/@narative/gatsby-theme-novela/src/sections/author/Author.Articles.tsx
 @@ -10,9 +10,51 @@ interface AuthorArticlesProps {
@@ -275,7 +275,7 @@ index e982823..9640211 100644
 +    subscription: true,
 +    hero: {
 +        regular: {
-+          src: 'https://firebasestorage.googleapis.com/v0/b/auth-39cb9.appspot.com/o/what2binge.png?alt=media&token=bc8a1e16-43da-4380-a463-0f7790c0c183'
++          src: 'https://firebasestorage.googleapis.com/v0/b/auth-39cb9.appspot.com/o/what2binge.png?alt=media&token=a8e5cd8e-b941-4525-b2a9-1535ea0a6591'
 +        }
 +    },
 +    isProject: true,
